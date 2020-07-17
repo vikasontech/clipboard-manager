@@ -31,12 +31,12 @@ while True:
         print('file open in write mode ...')
         f = open(filename, "a+")
       
-      f.write("\n\n---------------------------------------\n\n")
+      f.write("\n---------------------------------------\n")
       if is_print_date :
         now = dt.now()
         f.write(now.strftime("%d/%m/%Y %H:%M:%S")+"\n")
       print('writing in file')
-      f.write(txt + "\n")
+      f.write(txt)
       old = txt
       print(old)
       f.close()
