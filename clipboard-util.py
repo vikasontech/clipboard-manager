@@ -8,7 +8,7 @@ is_append_mode = True
 if not os.path.exists('data'):
     os.makedirs('data')
 
-filename=input('Input file name of the[clipboard.txt]:')
+filename=input('Input file name [clipboard.txt]:')
 
 if (filename == ''):
   filename = "clipboard.txt"
@@ -18,7 +18,8 @@ filename = "./data/"+filename
 print(filename)
 
 print("watching clipboard ...")
-
+# removed old values from the clipboard
+pyperclip.copy("")
 old = ''
 while True:
   try:
